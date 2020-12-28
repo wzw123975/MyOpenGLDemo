@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.wzw.myopengldemo.one.renderer.MyRenderer;
 import com.wzw.myopengldemo.one.renderer.OneRenderer;
+import com.wzw.myopengldemo.one.renderer.TwoRenderer;
 import com.wzw.myopengldemo.one.view.OneSurfaceView;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,7 +27,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void setData() {
         OneRenderer oneRenderer = new OneRenderer();
-        gl_surface_View.setMyRender(oneRenderer);
+        TwoRenderer twoRenderer = new TwoRenderer();
+        MyRenderer myRenderer = new MyRenderer();
+//        gl_surface_View.setMyRender(oneRenderer);
+//        gl_surface_View.setMyRender(twoRenderer);
+        gl_surface_View.setMyRender(myRenderer);
     }
 
 }
